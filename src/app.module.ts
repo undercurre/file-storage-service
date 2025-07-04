@@ -8,6 +8,7 @@ import { AuthModule } from './auth.module';
 import { APP_GUARD } from '@nestjs/core';
 import { JwtAuthGuard } from './guard/jwt/jwt-auth.guard';
 import { OssModule } from './oss/oss.module';
+import { CosModule } from './cos/cos.module';
 
 @Module({
   imports: [
@@ -29,6 +30,7 @@ import { OssModule } from './oss/oss.module';
       }),
     }),
     OssModule,
+    CosModule,
     AuthModule,
   ],
   controllers: [AppController],
